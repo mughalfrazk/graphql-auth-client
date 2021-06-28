@@ -1,0 +1,96 @@
+.custom-input-div {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.custom-input-field,
+.custom-select-field {
+  width: 100%;
+  border: none;
+  border-bottom: 0.1rem solid rgb(165, 165, 165);
+  padding: 8px 15px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-size: 18px;
+}
+
+.custom-input-field.disable {
+  border-bottom: 0.1rem solid rgb(216, 216, 216);
+}
+
+.custom-input-label {
+  position: absolute;
+  left: 18px;
+  top: 8px;
+  color: rgb(196, 196, 196);
+  transition: 500ms;
+  font-size: 18px;
+}
+
+.custom-input-label.active {
+  transform: translate(-3px, -17px);
+  font-size: 12px;
+  transition: 500ms;
+  font-weight: 600;
+  color: var(--info-color);
+  background-color: white;
+  padding: 0px 4px;
+}
+
+.custom-input-field:focus,
+.custom-select-field:focus {
+  border-bottom: 0.12rem solid var(--info-color);
+  background-color: rgb(240, 244, 247);
+}
+
+/* .input-error-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 5px;
+} */
+
+.custom-input-error {
+  position: relative;
+}
+
+.custom-input-error-text {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  width: 180px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  z-index: 10;
+  font-size: 12px;
+  visibility: hidden;
+  transition: 200ms;
+}
+
+.custom-input-error-icon:hover ~ .custom-input-error-text {
+  visibility: visible;
+  transition: 200ms;
+}
+
+.custom-input-readonly-icon {
+  position: absolute;
+  right: 6px;
+  top: 11px;
+}
+
+.custom-input-error {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+}
+
+.custom-input-readonly-icon {
+  fill: rgb(158, 168, 177);
+}
+
+.custom-input-error-icon {
+  fill: rgb(204, 12, 12);
+}
