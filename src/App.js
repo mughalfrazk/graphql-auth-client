@@ -40,8 +40,6 @@ const client = new ApolloClient({
 function App() {
   const auth = useAuth();
 
-  console.log(auth);
-
   let routes;
   if (auth.token) {
     routes = (

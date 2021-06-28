@@ -27,7 +27,6 @@ const VerifyEmail = () => {
           token,
         },
       });
-      console.log(data);
       setSuccessText(data.data.verifyEmail.message);
       setIsLoading(false);
       setToken("");
@@ -46,6 +45,7 @@ const VerifyEmail = () => {
         from there and paste it here to verify and login.
       </h5>
       {successText && <h4 className="text-success">{successText}</h4>}
+      {errorMsg && <h6 className="text-danger pt-2">{errorMsg}</h6>}
       <Input
         element="textarea"
         rows="5"

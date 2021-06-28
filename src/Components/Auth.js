@@ -116,7 +116,6 @@ const Auth = () => {
           password: loginInput.password,
         },
       });
-      console.log(data);
       setResponseData(data);
       auth.login({
         id: data.data.login.user.id,
@@ -152,7 +151,6 @@ const Auth = () => {
         },
       });
       setResponseData(data);
-      console.log(data);
       setIsLoading(false);
       history.push("/verify");
     } catch (err) {
